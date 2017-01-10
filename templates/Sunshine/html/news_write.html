@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sunshine - Responsive Hotel Template</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- LOAD CSS FILES -->
+  <link href="../../../static/css/main.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="../../../static/css/jquery.nailthumb.1.1.min.css">
+
+  <!-- LOAD JS FILES -->
+  <script src="../../../static/js/jquery.min.js"></script>
+  <script src="../../../static/js/bootstrap.min.js"></script>
+  <script src="../../../static/js/jquery.isotope.min.js"></script>
+  <script src="../../../static/js/jquery.prettyPhoto.js"></script>
+  <script src="../../../static/js/easing.js"></script>
+  <script src="../../../static/js/jquery.lazyload.js"></script>
+  <script src="../../../static/js/jquery.ui.totop.js"></script>
+  <script src="../../../static/js/selectnav.js"></script>
+  <script src="../../../static/js/ender.js"></script>
+  <script src="../../../static/js/custom.js"></script>
+  <script src="../../../static/js/responsiveslides.min.js"></script>
+
+</head>
+
+<body>
+<!-- header begin -->
+<header>
+  {% include "Sunshine/html/partials/header.html" %}
+</header>
+<!-- header close -->
+
+<!-- subheader begin -->
+<div id="subheader">
+  <div class="container">
+    <div class="row">
+      <div class="span12 slogan">
+        <h1>Elegant Room</h1>
+        <span>Feel more than home.</span>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- subheader close -->
+
+<!-- content begin -->
+<div id="content">
+  <div class="container">
+    <div class="row">
+      <div class="span8">
+        <form method="post" action="/write/" enctype="multipart/form-data">
+          {% csrf_token %}
+          <label>title</label>
+          <input type="text" name="title" id="title" style="width: 555px; height: 30px;"/>
+          <label>content <span class="req">*</span></label>
+          <textarea cols="15" rows="15" name="content" id="content" style="margin: 0px 0px 10px; width: 740px; height:300px;"></textarea>
+          <div id="error_message" class="error">Please check your message</div>
+          <div id="mail_success" class="success"> Thank you. Your message has been sent.</div>
+          <div id="mail_failed" class="error">Error, email not sent</div>
+          <input type="file"
+                 name="file"
+                 id="id_file"
+                 value="이미지 선택"/>
+          <p id="btnsubmit"><input type="submit" id="send" value="Send" class="btn btn-large"/></p>
+        </form>
+      </div>
+
+      <div id="sidebar" class="span4">
+
+        <div class="widget latest_news">
+          <h4 class="title">Latest News</h4>
+          <ul class="list-news">
+            <li>
+              <img src="../../../static/img/thumbnail-1.jpg" alt="" class="img-polaroid">
+              <div class="text"><h5><a href="../../../static/img/#">Lorem ipsum dolor sit amet</a></h5>
+                Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</div>
+            </li>
+            <li> <img src="../../../static/img/thumbnail-2.jpg" alt="" class="img-polaroid">
+              <div class="text">
+                <h5><a href="../../../static/img/#">Lorem ipsum dolor sit amet</a></h5>
+                Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</div>
+            </li></ul>
+          <ul class="list-news">
+            <li> <img src="../../../static/img/thumbnail-3.jpg" alt="" class="img-polaroid">
+              <div class="text">
+                <h5><a href="../../../static/img/#">Lorem ipsum dolor sit amet</a></h5>
+                Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- widget category -->
+        <div class="widget widget_category">
+          <h4 class="title"><span>Category</span></h4>
+          <ul>
+            <li><a href="#"><i class="icon-folder-close-alt"></i>Recommendation</a></li>
+            <li><a href="#"><i class="icon-folder-close-alt"></i>Hotel and Resorts</a></li>
+            <li><a href="#"><i class="icon-folder-close-alt"></i>Restaurant</a></li>
+            <li><a href="#"><i class="icon-folder-close-alt"></i>Event</a></li>
+            <li><a href="#"><i class="icon-folder-close-alt"></i>Promotion</a></li>
+          </ul>
+        </div>
+
+        <!-- widget tags -->
+        <div class="widget widget_tags">
+          <h4 class="title"><span>Tags</span></h4>
+          <ul>
+            <li><a href="#link">hotel</a></li>
+            <li><a href="#link">responsive</a></li>
+            <li><a href="#link">html5</a></li>
+            <li><a href="#link">css3</a></li>
+            <li><a href="#link">event</a></li>
+            <li><a href="#link">promotion</a></li>
+            <li><a href="#link">cozy</a></li>
+            <li><a href="#link">elegant</a></li>
+            <li><a href="#link">holiday</a></li>
+            <li><a href="#link">discount</a></li>
+          </ul>
+        </div>
+
+        <!-- widget text -->
+        <div class="widget widget-text">
+          <h4 class="title"><span>Text Widget</span></h4>
+          <div>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="map">
+
+    </div>
+
+  </div>
+</div>
+<!-- content close -->
+
+<!-- footer begin -->
+{% include "Sunshine/html/partials/footer.html" %}
+<!-- footer close -->
+
+</body>
+</html>
+
