@@ -10,19 +10,19 @@
 <div id="mainmenu-container">
   <ul id="mainmenu">
     <li><a href="{% url "index" %}">{% trans "메인" %}</a></li>
-    <li><a href="#">객실</a>
+    <li><a href="#">객실</a>{% trans "객실" %}
       <ul>
         <li><a href="{% url "room-list" %}">{% trans "객실목록" %}</a>
         <li><a href="{% url "room-detail" %}">{% trans "객실 상세설명" %}</a>
       </ul>
     </li>
-    <li><a href="#">연회</a>
+    <li><a href="#">연회</a>{% trans "연회" %}
       <ul>
         <li><a href="{% url "room-list" %}">{% trans "연회목록" %}</a>
         <li><a href="{% url "room-detail" %}">{% trans "연회 상세설명" %}</a>
       </ul>
     </li>
-    <li><a href="#">웨딩</a>
+    <li><a href="#">웨딩</a>{% trans "웨딩" %}
       <ul>
         <li><a href="{% url "room-list" %}">{% trans "웨딩 목록" %}</a>
         <li><a href="{% url "room-detail" %}">{% trans "웨딩 상세설명" %}</a>
@@ -40,7 +40,6 @@
     <li>
       <a href="{% url "news" %}">{% trans "공지사항" %}</a>
     </li>
-
 
     <!-- <li><a href="fullwidth.html">Fullwidth</a></li> -->
     <li><a href="{% url "gallery" %}">{% trans "갤러리" %}</a></li>
