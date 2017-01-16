@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-01 05:25+0000\n"
+"POT-Creation-Date: 2017-01-10 08:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -84,7 +84,7 @@ msgstr "Room Detail"
 
 #: templates/Sunshine/html/partials/header.html:19
 msgid "연회"
-msgstr "Banqqq"
+msgstr "Banquet"
 
 #: templates/Sunshine/html/partials/header.html:21
 msgid "연회목록"

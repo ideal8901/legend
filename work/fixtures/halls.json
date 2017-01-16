@@ -38,5 +38,38 @@
     "maximumNumberOfPeople": "100"
   },
   "model": "work.Hall"
+},
+
+  {
+  "fields": {
+    "type": "에메랄드",
+    "minimumNumberOfPeople": "80",
+    "maximumNumberOfPeople": "100"
+  },
+  "model": "work.Hall"
+},
+  {
+  "fields": {
+    "type": "라일락",
+    "minimumNumberOfPeople": "80",
+    "maximumNumberOfPeople": "100"
+  },
+  "model": "work.Hall"
+},
+  {
+  "fields": {
+    "type": "루비",
+    "minimumNumberOfPeople": "80",
+    "maximumNumberOfPeople": "100"
+  },
+  "model": "work.Hall"
+},
+  {
+  "fields": {
+    "type": "크리스탈",
+    "minimumNumberOfPeople": "80",
+    "maximumNumberOfPeople": "100"
+  },
+  "model": "work.Hall"
 }
 ]

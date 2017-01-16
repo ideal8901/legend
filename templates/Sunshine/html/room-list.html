@@ -1,24 +1,25 @@
 <!DOCTYPE html>
+{% load i18n %}
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <title>Sunshine - Responsive Hotel Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
+    <meta name="description" content="">
     <meta name="author" content="">
     
     <!-- LOAD CSS FILES -->
     <link href="../../../static/css/main.css" rel="stylesheet" type="text/css">
     
     <!-- LOAD JS FILES -->
-   	<script src="../../../static/js/jquery.min.js"></script>
+    <script src="../../../static/js/jquery.min.js"></script>
     <script src="../../../static/js/bootstrap.min.js"></script>
     <script src="../../../static/js/jquery.isotope.min.js"></script>
     <script src="../../../static/js/jquery.prettyPhoto.js"></script>
-     <script src="../../../static/js/easing.js"></script>
+    <script src="../../../static/js/easing.js"></script>
     <script src="../../../static/js/jquery.lazyload.js"></script>
     <script src="../../../static/js/jquery.ui.totop.js"></script>
-	<script src="../../../static/js/selectnav.js"></script>
+    <script src="../../../static/js/selectnav.js"></script>
     <script src="../../../static/js/ender.js"></script>
     <script src="../../../static/js/custom.js"></script>
     <script src="../../../static/js/responsiveslides.min.js"></script>
@@ -49,17 +50,22 @@
   <div id="content">
     	<div class="container">
         	
-			<div class="row room-list">
-            
+    <div class="row">
+      <div class="text-center">
+        <h2 style="font-weight: 500;">{% trans "스탠다드" %}</h2>
+        {% trans "편안하고 안락한 객실이 준비되어 있습니다" %}<br><br>
+      </div>
+    </div>
+           <div class="row room-list">
             	<!-- room -->
               <div class="room span4">
                     <div class="btn-book-container">
                     <a href="#" class="btn-book">Book Now</a>
                     </div>
-           	    	<img src="../../../static/img/pic-blank-1.gif" data-original="img/room1.jpg" class="img-polaroid" alt="">
-                    <h4>Deluxe Room</h4>
+           	    	<img src="../../../static/img/room/thumb_standard_ondol-1.jpg" data-original="img/room1.jpg" class="img-polaroid" alt="">
+                    <h4>{% trans "온돌" %}</h4>
                     <div class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			{% trans "한국적 취향의 전통적인 온돌을 원하시는 고객님을 위해 내 집과 같은 안락함과 포근한 느낌으로 성공적인 비즈니스와 휴식을 제공해 드립니다." %}
                 	</div>
                     <div class="row">
                             <ul class="room-features">
@@ -80,7 +86,7 @@
                             </div>
                             
                             <div class="span2 text-right">
-                            <a href="#" class="btn btn-primary">View Detail</a>
+                            <a href="room-details/?room_type=스탠다드(온돌)" class="btn btn-primary">{% trans "자세히 보기" %}</a>
                             </div>
                     </div>
                      
@@ -93,10 +99,10 @@
                     <div class="btn-book-container">
                     <a href="#" class="btn-book">Book Now</a>
                     </div>
-           	    	<img src="../../../static/img/pic-blank-1.gif" data-original="img/room-2.jpg" class="img-polaroid" alt="">
-                    <h4>Elegant Room</h4>
+           	    	<img src="../../../static/img/room/thumb_standard_double.jpg" data-original="img/room-2.jpg" class="img-polaroid" alt="">
+                    <h4>{% trans "더블" %}</h4>
                     <div class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			{% trans "편안함과 세련된 더블룸은 짜임새 있는 효율적인 공간구성으로 한층 더 안락함을 드리며, 전면의 통유리를 통해 아름다운 전망을 선사합니다" %}
                 	</div>
                     <div class="row">
                             <ul class="room-features">
@@ -117,7 +123,7 @@
                             </div>
                             
                             <div class="span2 text-right">
-                            <a href="#" class="btn btn-primary">View Detail</a>
+                            <a href="room-details/?room_type=스탠다드(더블)" class="btn btn-primary">{% trans "자세히 보기" %}</a>
                             </div>
                     </div>
       			</div>
@@ -129,10 +135,10 @@
                     <div class="btn-book-container">
                     <a href="#" class="btn-book">Book Now</a>
                     </div>
-           	    	<img src="../../../static/img/pic-blank-1.gif" data-original="img/room-3.jpg" class="img-polaroid" alt="">
-                    <h4>Luxury Room</h4>
+           	    	<img src="../../../static/img/room/thumb_standard_twin.jpg" data-original="img/room-3.jpg" class="img-polaroid" alt="">
+                    <h4>{% trans "트윈"%}</h4>
                     <div class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			{% trans "현대적이면서 안락한 분위기를 자아내는 트윈룸은 비즈니스 및 가족단위 고객의 이용에 편리하도록 설계되어 있습니다"%}
                 	</div>
                     <div class="row">
                             <ul class="room-features">
@@ -154,22 +160,31 @@
                             </div>
                             
                             <div class="span2 text-right">
-                            <a href="#" class="btn btn-primary">View Detail</a>
+                            <a href="room-details/?room_type=스탠다드(트윈)" class="btn btn-primary">{% trans "자세히 보기" %}</a>
                             </div>
                     </div>
 
       			</div>
                 <!-- close room -->
-				
+			</div>
+						
+    <div class="row">
+      <div class="text-center">
+        <h2 style="font-weight: 500;">{% trans "디럭스" %}</h2>
+        {% trans "편안하고 안락한 객실이 준비되어 있습니다" %}<br><br>
+      </div>
+    </div>
+
+           <div class="row room-list">
                 <!-- room -->
               <div class="room span4">
                     <div class="btn-book-container">
                     <a href="#" class="btn-book">Book Now</a>
                     </div>
-           	    	<img src="../../../static/img/pic-blank-1.gif" data-original="img/room-4.jpg" class="img-polaroid" alt="">
-                    <h4>Deluxe Room</h4>
+           	    	<img src="../../../static/img/room/thumb_deluxe_family.jpg" data-original="img/room-4.jpg" class="img-polaroid" alt="">
+                    <h4>{% trans "패밀리 온돌"%}</h4>
                     <div class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			{% trans "전통적인 온돌을 원하시는가족이나 단체모임 고객님들을 위해 내 집과 같은 포근함과 편리함을 제공해드립니다." %}
                 	</div>
                     <div class="row">
                             <ul class="room-features">
@@ -190,7 +205,7 @@
                             </div>
                             
                             <div class="span2 text-right">
-                            <a href="#" class="btn btn-primary">View Detail</a>
+                            <a href="room-details/?room_type=디럭스(패밀리온돌)" class="btn btn-primary">{% trans "자세히 보기" %}</a>
                             </div>
                     </div>
                      
@@ -203,10 +218,10 @@
                     <div class="btn-book-container">
                     <a href="#" class="btn-book">Book Now</a>
                     </div>
-           	    	<img src="../../../static/img/pic-blank-1.gif" data-original="img/room-5.jpg" class="img-polaroid" alt="">
-                    <h4>Elegant Room</h4>
+           	    	<img src="../../../static/img/room/thumb_deluxe_double.jpg" data-original="img/room-5.jpg" class="img-polaroid" alt="">
+                    <h4>{% trans "더블 온돌" %}</h4>
                     <div class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			{% trans "우리 고유의 전통적인 멋과 현대적 장식이 어우러진 내 집같은 포근함을 경험할 수 있는 온돌 객실에 더블침대를 갖추고 있는 객실입니다" %}
                 	</div>
                     <div class="row">
                             <ul class="room-features">
@@ -227,24 +242,35 @@
                             </div>
                             
                             <div class="span2 text-right">
-                            <a href="#" class="btn btn-primary">View Detail</a>
+                            <a href="room-details/?room_type=디럭스(더블온돌)" class="btn btn-primary">{% trans "자세히 보기" %}</a>
                             </div>
                     </div>
       			</div>
                 <!-- close room -->
                 
-                
-
+              <!-- room -->
+                <div class="room span4">
+                            <div class="clearfix"></div>
+      		</div>
+                <!-- close room -->
+	    </div>
+           <div class="row room-list">
+        	<div class="row">
+          	    <div class="text-center">
+          	      <h2 style="font-weight: 500;">{% trans "스위트" %}</h2>
+          	      {% trans "편안하고 안락한 객실이 준비되어 있습니다" %}<br><br>
+          	    </div>
+          	  </div>
 
               <!-- room -->
                 <div class="room span4">
                     <div class="btn-book-container">
                     <a href="#" class="btn-book">Book Now</a>
                     </div>
-           	    	<img src="../../../static/img/pic-blank-1.gif" data-original="img/room-6.jpg" class="img-polaroid" alt="">
-                    <h4>Luxury Room</h4>
+           	    	<img src="../../../static/img/room/thumb_suite-1.jpg" data-original="img/room-6.jpg" class="img-polaroid" alt="">
+                    <h4>{% trans "양실" %}</h4>
                     <div class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			{% trans "고급스러운 실내장식과 여유로운 공간구성을 통하여 고객님이 최대한 여유롭고 편안히 쉴 수 있는 공간으로, 고객님의 품격을 높여드립니다" %}
                 	</div>
                     <div class="row">
                             <ul class="room-features">
@@ -266,14 +292,51 @@
                             </div>
                             
                             <div class="span2 text-right">
-                            <a href="#" class="btn btn-primary">View Detail</a>
+                            <a href="room-details/?room_type=스위트(양실)" class="btn btn-primary">{% trans "자세히 보기" %}</a>
                             </div>
                     </div>
 
       			</div>
                 <!-- close room -->
-            	
-         	 </div>
+              <!-- room -->
+                <div class="room span4">
+                    <div class="btn-book-container">
+                    <a href="#" class="btn-book">Book Now</a>
+                    </div>
+           	    	<img src="../../../static/img/room/thumb_suite_korean-1.jpg" data-original="img/room-6.jpg" class="img-polaroid" alt="">
+                    <h4>{% trans "한실" %} </h4>
+                    <div class="description">
+			{% trans "우리나라 고유의 전통적인 멋과 현대적 장식이 어우러진 넉넉한 공간을 통하여 베란다를 갖추고 있는 객실입니다" %}
+                	</div>
+                    <div class="row">
+                            <ul class="room-features">
+                                <li class="span2"><i class="icon-check-sign"></i>Kingsize Bed</li>
+                                <li class="span2"><i class="icon-check-sign"></i>Mountain View</li>
+                                <li class="span2"><i class="icon-check-sign"></i>Hotspot and TV Cable</li>
+                                <li class="span2"><i class="icon-check-sign"></i>Free Lunch and Dinner</li>
+                            
+                            </ul>
+                            
+                            <div class="clearfix"></div>
+                            
+                            <br>
+                            
+							<div class="span2">
+                            	<div class="price-info">
+                            		<span class="price">$399</span> / night
+                            	</div>
+                            </div>
+                            
+                            <div class="span2 text-right">
+                            <a href="room-details/?room_type=스위트(한실)" class="btn btn-primary">{% trans "자세히 보기" %}</a>
+                            </div>
+                    </div>
+
+      			</div>
+                <!-- close room -->
+                <div class="room span4">
+		</div></div>
+          </div>
              
     	</div>
         
@@ -286,4 +349,3 @@
    
 </body>
 </html>
-

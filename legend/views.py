@@ -217,7 +217,12 @@ def write(request):
 def room_details(request):
     pre_function(request)
 
-    return render(request, 'Sunshine/html/room-details.html')
+    room_type = request.GET.get("room_type",None)
+
+    if room_type:
+    	room = Room.objects.filter(type=room_type).first()
+    	return render(request, 'Sunshine/html/room-details.html',{'room_type': room.type, 'introduce': room.introduce})
+    return render(request, 'Sunshine/html/404.html')
 
 def room_list(request):
     pre_function(request)

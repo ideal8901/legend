@@ -5,7 +5,8 @@
     "price": "169400",
     "space": "11",
     "numberOfPeople": "4",
-    "numberOfRoom": "14"
+    "numberOfRoom": "14",
+    "introduce": "스탠다드 온돌은 따뜻해"
   },
   "model": "work.Room"
 },
@@ -15,7 +16,19 @@
     "price": "169400",
     "space": "12",
     "numberOfPeople": "2",
-    "numberOfRoom": "29"
+    "numberOfRoom": "29",
+    "introduce": "스탠다드 더블도 따뜻해"
+  },
+  "model": "work.Room"
+},
+  {
+  "fields": {
+    "type": "스탠다드(트윈)",
+    "price": "169400",
+    "space": "12",
+    "numberOfPeople": "2",
+    "numberOfRoom": "29",
+    "introduce": "스탠다드 트윈도 따뜻해"
   },
   "model": "work.Room"
 },
@@ -25,7 +38,19 @@
     "price": "193600",
     "space": "13",
     "numberOfPeople": "6",
-    "numberOfRoom": "8"
+    "numberOfRoom": "8",
+    "introduce": "스탠다드 온돌은 따뜻해"
+  },
+  "model": "work.Room"
+},
+  {
+  "fields": {
+    "type": "디럭스(더블온돌)",
+    "price": "193600",
+    "space": "13",
+    "numberOfPeople": "2",
+    "numberOfRoom": "8",
+    "introduce": "스탠다드 온돌은 따뜻해"
   },
   "model": "work.Room"
 },
@@ -35,7 +60,19 @@
     "price": "484000",
     "space": "20",
     "numberOfPeople": "2",
-    "numberOfRoom": "2"
+    "numberOfRoom": "2",
+    "introduce": "스탠다드 온돌은 따뜻해"
+  },
+  "model": "work.Room"
+},
+  {
+  "fields": {
+    "type": "스위트(한실)",
+    "price": "326700",
+    "space": "20",
+    "numberOfPeople": "8",
+    "numberOfRoom": "2",
+    "introduce": "스탠다드 온돌은 따뜻해"
   },
   "model": "work.Room"
 }

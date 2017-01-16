@@ -11,11 +11,12 @@
   <ul id="mainmenu">
     <li><a href="{% url "index" %}">{% trans "메인" %}</a></li>
 
-    <li><a href="#">{% trans "객실" %}</a>
-      <ul>
+    <li><a href="{% url "room-list"%}">{% trans "객실" %}</a>
+<!--      <ul>
         <li><a href="{% url "room-list" %}">{% trans "객실목록" %}</a>
         <li><a href="{% url "room-detail" %}">{% trans "객실 상세설명" %}</a>
       </ul>
+-->
     </li>
 
     <li><a href="#">{% trans "연회" %}</a>
