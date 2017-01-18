@@ -1,0 +1,65 @@
+[
+{
+  "fields": {
+    "type": "스탠다드(온돌)",
+    "filename": "standard_ondol-1.jpg"
+  },
+  "model": "work.Image"
+},
+  {
+  "fields": {
+    "type": "스탠다드(더블)",
+    "filename": "standard_double.jpg"
+  },
+  "model": "work.Image"
+},
+  {
+  "fields": {
+    "type": "스탠다드(트윈)",
+    "filename": "standard_twin.jpg"
+  },
+  "model": "work.Image"
+},
+  {
+  "fields": {
+    "type": "디럭스(패밀리온돌)",
+    "filename": "deluxe_family.jpg"
+  },
+  "model": "work.Image"
+},
+  {
+  "fields": {
+    "type": "디럭스(더블온돌)",
+    "filename": "deluxe_double.jpg"
+  },
+  "model": "work.Image"
+},
+  {
+  "fields": {
+    "type": "스위트(양실)",
+    "filename": "suite-1.jpg"
+  },
+  "model": "work.Image"
+},
+  {
+  "fields": {
+    "type": "스위트(양실)",
+    "filename": "suite-2.jpg"
+  },
+  "model": "work.Image"
+},
+  {
+  "fields": {
+    "type": "스위트(한실)",
+    "filename": "suite_korean-1.jpg"
+  },
+  "model": "work.Image"
+},
+  {
+  "fields": {
+    "type": "스위트(한실)",
+    "filename": "suite_korean-2.jpg"
+  },
+  "model": "work.Image"
+}
+]

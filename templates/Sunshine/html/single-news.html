@@ -58,8 +58,8 @@
           <div>
             <div class="info">
               <div class="date">
-                <h4>20</h4>
-                <span>SEP</span> </div>
+                <h4>{{ article.date|date:'d' }}</h4>
+                <span>{{ article.date|date:'F' }}</span> </div>
             </div>
             <div class="preview">
               <a href="#">

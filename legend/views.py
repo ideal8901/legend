@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+
+
 # forms
 from django.http import HttpResponseRedirect
 from django.template import RequestContext
@@ -13,6 +16,7 @@ from work.models import BanquetReservation
 from work.models import RestaurantReservation
 from work.models import Room
 from work.models import Hall
+from work.models import Image
 from django.templatetags.static import static
 
 #internationalization
@@ -214,6 +218,24 @@ def write(request):
         return redirect('/news/')
     return render(request, 'Sunshine/html/news_write.html')
 
+def banquet_details(request):
+    pre_function(request)
+
+    room_type = request.GET.get("room_type",None)
+
+    if room_type:
+    	room = Room.objects.filter(type=room_type).first()
+	images = Image.objects.filter(type=room_type)
+
+    	return render(request, 'Sunshine/html/banquet-details.html',{'room_type': room.type, 'introduce': room.introduce,'price': '₩'+str(room.price), 'images':images})
+
+    return render(request, 'Sunshine/html/404.html')
+
+def banquet_list(request):
+    pre_function(request)
+
+    return render(request, 'Sunshine/html/banquet-list.html')
+
 def room_details(request):
     pre_function(request)
 
@@ -221,7 +243,10 @@ def room_details(request):
 
     if room_type:
     	room = Room.objects.filter(type=room_type).first()
-    	return render(request, 'Sunshine/html/room-details.html',{'room_type': room.type, 'introduce': room.introduce})
+	images = Image.objects.filter(type=room_type)
+
+    	return render(request, 'Sunshine/html/room-details.html',{'room_type': room.type, 'introduce': room.introduce,'price': '₩'+str(room.price), 'images':images})
+
     return render(request, 'Sunshine/html/404.html')
 
 def room_list(request):

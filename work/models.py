@@ -19,9 +19,15 @@ class Hall(models.Model):
     minimumNumberOfPeople = models.IntegerField()
     maximumNumberOfPeople = models.IntegerField()
 
+    introduce = models.TextField(blank=True, null=True)
+
     def __str__(self):
         return '%s' % self.type
 
+#images for Room, Hall 
+class Image(models.Model):
+    type = models.CharField(max_length=30)
+    filename = models.CharField(max_length=30)
 
 class RoomReservation(models.Model):
     reserveID = models.AutoField(primary_key=True)
