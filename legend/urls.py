@@ -10,7 +10,10 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'legend.views.index'),
     url(r'^index','legend.views.index', name='index'),
+    url(r'^popup','legend.views.popup', name='popup'),
     #url(r'^404\.html','legend.views.error')
+    url(r'^restaurant-detail','legend.views.restaurant', name='restaurant'),
+
     url(r'^banquet-list','legend.views.banquet_list', name='banquet-list'),
     url(r'^banquet-details','legend.views.banquet_details', name='banquet-detail'),
     url(r'^room-list','legend.views.room_list', name='room-list'),

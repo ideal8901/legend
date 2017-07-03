@@ -9,26 +9,21 @@
 <!-- mainmenu begin -->
 <div id="mainmenu-container">
   <ul id="mainmenu">
+
+<!--
     <li><a href="{% url "index" %}">{% trans "메인" %}</a></li>
+-->
 
     <li><a href="{% url "room-list"%}">{% trans "객실" %}</a>
-<!--      <ul>
-        <li><a href="{% url "room-list" %}">{% trans "객실목록" %}</a>
-        <li><a href="{% url "room-detail" %}">{% trans "객실 상세설명" %}</a>
-      </ul>
--->
+    </li>
+
+    <li><a href="{% url "restaurant"%}">{% trans "레스토랑" %}</a>
     </li>
 
     <li><a href="banquet-list">{% trans "연회" %}</a>
     </li>
 
     <li><a target="_blank" href="http://merrysquare.co.kr">{% trans "웨딩" %}</a>
-<!--
-      <ul>
-        <li><a href="{% url "room-list" %}">{% trans "웨딩 목록" %}</a>
-        <li><a href="{% url "room-detail" %}">{% trans "웨딩 상세설명" %}</a>
-      </ul>
--->
     </li>
 
     <li><a href="#">{% trans "예약" %}</a>

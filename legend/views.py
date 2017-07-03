@@ -9,6 +9,7 @@ from work.forms import BanquetReservationForm
 from work.forms import RestaurantReservationForm
 
 from legend.settings import DATA_DIR
+from django.http import HttpResponse
 
 # models
 from work.models import RoomReservation
@@ -17,21 +18,30 @@ from work.models import RestaurantReservation
 from work.models import Room
 from work.models import Hall
 from work.models import Image
+from work.models import Article
 from django.templatetags.static import static
 
 #internationalization
 from django.utils.translation import ugettext as _, activate
 from django.utils.translation import ugettext
 
-
 from django.shortcuts import render, redirect, render_to_response
-from work.models import Article
 
+def popup(request):
+
+    popups = Image.objects.filter(type='popup')
+
+    pop_list=""
+    for popup in popups:
+	pop_list += popup.filename+" "
+
+    return HttpResponse(pop_list);
 
 def index(request):
     pre_function(request)
 
     rooms = Room.objects.all()
+
     return render(request, 'Sunshine/html/index.html', {'rooms': rooms})
 
 def booking(request):
@@ -253,6 +263,12 @@ def room_list(request):
     pre_function(request)
 
     return render(request, 'Sunshine/html/room-list.html')
+
+def restaurant(request):
+    pre_function(request)
+
+    return render(request, 'Sunshine/html/restaurant.html')
+
 
 def room_reservation_ok(request):
     pre_function(request)

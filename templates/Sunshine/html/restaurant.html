@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Hotel Legend - Best experience ever</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <!-- LOAD CSS FILES -->
+    <link href="../../../static/css/main.css" rel="stylesheet" type="text/css">
+    
+    <!-- LOAD JS FILES -->
+    <script src="../../../static/js/jquery.min.js"></script>
+    <script src="../../../static/js/bootstrap.min.js"></script>
+    <script src="../../../static/js/jquery.isotope.min.js"></script>
+    <script src="../../../static/js/jquery.prettyPhoto.js"></script>
+    <script src="../../../static/js/easing.js"></script>
+    <script src="../../../static/js/jquery.lazyload.js"></script>
+    <script src="../../../static/js/jquery.ui.totop.js"></script>
+    <script src="../../../static/js/selectnav.js"></script>
+    <script src="../../../static/js/ender.js"></script>
+    <script src="../../../static/js/custom.js"></script>
+    <script src="../../../static/js/responsiveslides.min.js"></script>
+    
+</head>
+
+<body>
+	<!-- header begin -->
+	<header>
+        {% include "Sunshine/html/partials/header.html" %}
+    </header>
+	<!-- header close -->
+    
+    <!-- subheader begin -->
+	<div id="subheader">
+    	<div class="container">
+    	  <div class="row">
+          	<div class="span12 slogan">
+            	<h1>Elegant Room</h1>
+                <span>Feel more than home.</span>
+            </div>
+          </div>
+    	</div>
+    </div>
+	<!-- subheader close -->  
+      
+	<!-- content begin -->
+  <div id="content">
+    	<div class="container">
+        	<div class="row">
+            	<div class="span8">
+                <!-- Slideshow -->
+                        <div class="callbacks_container">
+                              <ul class="rslides pic_slider">
+				{% for image in images %}
+                                	<li>
+                                  	<img src="../../../static/img/room/{{ image.filename }}" data-original="img/room-detail-2.jpg" alt="">
+                                	</li>
+				{% endfor %}
+                             </ul>
+                        </div>
+                <!-- Slideshow close -->
+                </div>
+                
+		<div class="row">
+
+                <div class="span4">
+                	<div class="room-description">
+			{{ introduce }}
+                    <div class="row list-features">
+                    	<h4 class="span4">Features</h4>
+                         <ul class="room-features">
+                            <li class="span2"><i class="icon-check-sign"></i>Kingsize Bed</li>
+                            <li class="span2"><i class="icon-check-sign"></i>Mountain View</li>
+                            <li class="span2"><i class="icon-check-sign"></i>Hotspot and TV Cable</li>
+                            <li class="span2"><i class="icon-check-sign"></i>Free Lunch and Dinner</li>
+                            <li class="span2"><i class="icon-check-sign"></i>Kingsize Bed</li>
+                            <li class="span2"><i class="icon-check-sign"></i>Mountain View</li>
+                            <li class="span2"><i class="icon-check-sign"></i>Hotspot and TV Cable</li>
+                            <li class="span2"><i class="icon-check-sign"></i>Free Lunch and Dinner</li>
+                            <li class="span2"><i class="icon-check-sign"></i>Kingsize Bed</li>
+                            <li class="span2"><i class="icon-check-sign"></i>Mountain View</li>
+                            <li class="span2"><i class="icon-check-sign"></i>Hotspot and TV Cable</li>
+                            <li class="span2"><i class="icon-check-sign"></i>Free Lunch and Dinner</li>
+                        </ul>
+                    </div>
+                    
+                    <h4>Price</h4>
+                    <div class="row">
+                    	<div class="span2">
+                        	<div class="price-info">
+                            		<span class="price">{{ price }}</span> / night
+                            	</div>
+                        </div>
+                            
+                        <div class="span2 text-right">
+                        	<a href="#" class="btn btn-primary">Book This Room</a>
+                        </div>
+
+                    </div>                    
+		    </div>
+            	</div>
+            </div>	
+            <hr>
+    	</div>
+        </div>
+	<!-- content close -->
+    
+ <!-- footer begin -->
+{% include "Sunshine/html/partials/footer.html" %}
+<!-- footer close -->
+   
+</body>
+</html>
+

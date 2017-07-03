@@ -57,7 +57,28 @@
 },
   {
   "fields": {
-    "type": "스위트(한실)",
+    "type": "popup",
+    "filename": "suite_korean-2.jpg"
+  },
+  "model": "work.Image"
+},
+  {
+  "fields": {
+    "type": "popup",
+    "filename": "suite_korean-2.jpg"
+  },
+  "model": "work.Image"
+},
+  {
+  "fields": {
+    "type": "popup",
+    "filename": "suite_korean-2.jpg"
+  },
+  "model": "work.Image"
+},
+  {
+  "fields": {
+    "type": "popup",
     "filename": "suite_korean-2.jpg"
   },
   "model": "work.Image"
